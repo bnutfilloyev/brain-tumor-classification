@@ -1,0 +1,74 @@
+keras-test/*
+runs/*
+train2/*
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# PyCharm, VS Code, etc.
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TensorFlow/Keras
+.keras/
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+
+# PyTorch
+*.pth
+*.pt
+
+# Weights & Biases
+wandb/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Temp files
+tmp/
+temp/
+
+# Data files (if needed, adjust as necessary)
+# *.csv
+# *.json
+# *.npy
+# *.npz
+
+# Custom cache directories
+.cache/
+
+.env

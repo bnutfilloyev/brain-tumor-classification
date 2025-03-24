@@ -1,0 +1,33 @@
+export const darkTheme = {
+    bg: "#0E131F",
+    bgLighter: "#19212E",
+    itemHover: "#253047",
+    itemText: "#E3F2FD",
+    primary: "#4CAF50",
+    secondary: "#03A9F4",
+    bgDark: "#15171E",
+    text: "#FFFFFF",
+    textSoft: "#B0BEC5",
+    card: "#1A1F2C",
+    border: "#03A9F4",
+    success: "#66BB6A",
+    warning: "#FFCA28",
+    danger: "#EF5350",
+}
+
+export const lightTheme = {
+    bg: "#F3F8FF",
+    bgLighter: "#FFFFFF",
+    itemHover: "#E3F2FD",
+    itemText: "#2E3B4E",
+    primary: "#4CAF50",
+    secondary: "#03A9F4",
+    bgDark: "#FFFFFF",
+    text: "#2E3B4E",
+    textSoft: "#78909C",
+    card: "#FFFFFF",
+    border: "#03A9F4",
+    success: "#66BB6A",
+    warning: "#FFCA28",
+    danger: "#EF5350",
+}

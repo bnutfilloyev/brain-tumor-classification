@@ -1,0 +1,31 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: brain_tumor_backend
+    ports:
+      - "8000:8000"
+    networks:
+      - mynetwork
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: brain_tumor_frontend
+    environment:
+      - REACT_APP_API_BASE_URL=http://backend:8000
+    ports:
+      - "3000:80"
+    networks:
+      - mynetwork
+    volumes:
+      - ./src:/app/src
+
+networks:
+  mynetwork:
+    driver: bridge
