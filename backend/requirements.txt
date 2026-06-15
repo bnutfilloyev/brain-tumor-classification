@@ -1,7 +1,11 @@
+# Production runtime — lightweight, no TensorFlow (inference via ONNX Runtime).
 fastapi
-uvicorn
+uvicorn[standard]
 pillow
-ultralytics
 python-multipart
-keras
-tensorflow
+onnxruntime
+numpy
+sqlalchemy
+pydicom
+anthropic
+reportlab

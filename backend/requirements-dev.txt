@@ -1,0 +1,11 @@
+# Development / training extras — needed only to (re)train the model, compute
+# metrics, embeddings and to convert the Keras model to ONNX. NOT required to
+# run the production server (see requirements.txt).
+-r requirements.txt
+
+tensorflow
+keras
+scikit-learn
+matplotlib
+tf2onnx
+onnx

@@ -1,0 +1,46 @@
+{
+  "test_samples": 586,
+  "models": [
+    {
+      "name": "ResNet50V2 (frozen)",
+      "accuracy": 0.6877,
+      "macro_f1": 0.6599,
+      "params_m": 23.56,
+      "infer_ms": 32.3,
+      "strategy": "Transfer (feature extraction)"
+    },
+    {
+      "name": "MobileNetV2 (frozen)",
+      "accuracy": 0.9096,
+      "macro_f1": 0.9142,
+      "params_m": 2.26,
+      "infer_ms": 14.8,
+      "strategy": "Transfer (feature extraction)"
+    },
+    {
+      "name": "Custom CNN (from scratch)",
+      "accuracy": 0.9437,
+      "macro_f1": 0.9439,
+      "params_m": 3.3,
+      "infer_ms": 53.1,
+      "strategy": "From scratch"
+    },
+    {
+      "name": "EfficientNetB0 (fine-tuned, deployed)",
+      "strategy": "Transfer (fine-tuned)",
+      "params_m": 5.3,
+      "infer_ms": null,
+      "deployed": true,
+      "accuracy": 0.9437,
+      "macro_f1": 0.9474
+    },
+    {
+      "name": "EfficientNetB0 (frozen)",
+      "accuracy": 0.9539,
+      "macro_f1": 0.9573,
+      "params_m": 4.05,
+      "infer_ms": 23.4,
+      "strategy": "Transfer (feature extraction)"
+    }
+  ]
+}

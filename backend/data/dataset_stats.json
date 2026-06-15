@@ -1,0 +1,27 @@
+{
+  "name": "Brain Tumor MRI Dataset (4-class)",
+  "modality": "MRI (T1-weighted, contrast-enhanced)",
+  "classes": [
+    "Glioma",
+    "Meningioma",
+    "Notumor",
+    "Pituitary"
+  ],
+  "train_counts": {
+    "Glioma": 760,
+    "Meningioma": 769,
+    "Notumor": 410,
+    "Pituitary": 739
+  },
+  "test_counts": {
+    "Glioma": 166,
+    "Meningioma": 168,
+    "Notumor": 90,
+    "Pituitary": 162
+  },
+  "total_train": 2678,
+  "total_test": 586,
+  "image_size": "224x224 RGB (EfficientNetB0)",
+  "split": "Stratified 82/18 train-test split",
+  "source_url": "https://github.com/sartajbhuvaji/brain-tumor-classification-dataset"
+}

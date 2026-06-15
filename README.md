@@ -1,364 +1,109 @@
-# Brain Tumor Detection System
+# NeuroScan — Brain Tumor Classification Platform
 
-A complete solution for detecting and classifying brain tumors from MRI scans using deep learning, featuring a React frontend and FastAPI backend.
-
-## Project Overview
-
-This system assists medical professionals by providing an easy-to-use interface for analyzing brain MRI scans. The system classifies brain images into four categories: Glioma, Meningioma, No tumor, and Pituitary tumor.
-
-## Components
-
-The project consists of two main components:
-
-1. **Frontend**: A React application with an intuitive user interface for image upload and visualization
-2. **Backend**: A FastAPI service that processes images and runs the tumor detection model
+A clinical decision-support platform for brain MRI tumor classification, built for a PhD
+research project. It detects four classes (**Glioma, Meningioma, Notumor, Pituitary**) from
+MRI scans and wraps the model in a full demo platform: patient management, case history,
+explainability (Grad-CAM), a Claude-powered clinical assistant, and a rich metrics dashboard.
 
 ## Features
 
-- Modern, responsive web interface with light/dark theme support
-- Drag-and-drop image upload functionality
-- Multi-image batch processing
-- Real-time visual feedback with custom MRI-themed loading animation
-- Detailed classification results with confidence scores
-- RESTful API for integration with other systems
-- Docker support for easy deployment
+- **Modern clinical UI** — minimalist light-mode interface (React + Vite + Tailwind), bilingual
+  **English / Uzbek** switcher.
+- **Patient management** — full CRUD, medical record numbers, and per-patient **case history**
+  (studies + predictions stored in SQLite).
+- **Multi-format ingestion** — JPG / PNG **and DICOM (.dcm)** with metadata extraction.
+- **Explainability** — Grad-CAM heatmaps showing which regions drove each prediction.
+- **AI clinical assistant** — Claude (Haiku) generates educational clinical summaries and answers
+  free-form questions about each finding, **streamed token-by-token** (with medical disclaimers).
+- **Metrics dashboard** — accuracy, per-class precision/recall/F1 (radar), confusion matrix
+  (count/% toggle), ROC & Precision-Recall curves, **calibration/reliability diagram (ECE)**,
+  **t-SNE feature embedding**, dataset statistics, and training history.
+- **PDF reports** — one-click clinical report per patient (info, case history, MRI + Grad-CAM
+  images, AI summaries) for the thesis defense.
 
-## Technology Stack
-
-### Frontend
-- React 18
-- Styled Components for UI styling
-- Material UI icons
-- Axios for API communication
-- React file image to base64 for image encoding
-
-### Backend
-- Python 3.11
-- FastAPI for the web API
-- TensorFlow/Keras for the neural network model
-- Pillow for image processing
-- NumPy for numerical operations
-- Uvicorn as the ASGI server
-
-## System Architecture
+## Architecture
 
 ```
-brain-tumor-detection/
-├── frontend/               # React frontend application
-├── backend/                # FastAPI backend service
-├── keras-test/             # Training-testing notebook
-└── README.md               # This file
+frontend/  React + Vite + Tailwind + Recharts (SPA, served by nginx in prod)
+backend/   FastAPI + Keras/TensorFlow + SQLAlchemy (SQLite) + Anthropic SDK + pydicom
+scripts/   compute_metrics.py — evaluation metrics generator
 ```
 
-## Frontend
+Key backend endpoints: `/analyze` (image/DICOM inference + Grad-CAM), `/patients` (CRUD +
+`/history`), `/ai/summary` & `/ai/chat` (Claude), `/metrics/*` (performance, dataset, training,
+live overview).
 
-The frontend provides a user-friendly interface for uploading and analyzing brain MRI scans.
+## Quick start (local)
 
-### Frontend Features
-- Light and dark theme toggle
-- Drag-and-drop interface for image uploads
-- Support for multiple image uploads
-- Real-time visual feedback during processing
-- Color-coded results display
-
-### Frontend Structure
-
-```
-frontend/
-├── public/                # Static files
-├── src/
-│   ├── Components/        # React components
-│   │   ├── ImageUpload.jsx   # Image upload component
-│   │   ├── ResultCard.jsx    # Results display component
-│   │   ├── Loader/          # Loading animation
-│   │   ├── PredictedImageCard.jsx  # Image card component
-│   │   └── ImagesCard.jsx   # Thumbnail component
-│   ├── utils/            # Utility functions
-│   │   ├── prediction.js    # API integration
-│   │   └── themes.js        # Theme definitions
-│   ├── App.js            # Main application component
-│   └── index.js          # Entry point
-├── Dockerfile            # Docker configuration
-└── package.json          # Dependencies and scripts
-```
-
-## Backend API
-
-The backend provides endpoints for processing brain MRI scans and returning classification results.
-
-### API Endpoints
-
-#### POST /predict
-
-Processes base64-encoded images and returns tumor detection results.
-
-**Request Body:**
-```json
-{
-  "image": [
-    "base64_encoded_image_string",
-    "another_base64_encoded_image_string"
-  ]
-}
-```
-
-**Response:**
-```json
-{
-  "results": [
-    {
-      "id": 1,
-      "detections": [
-        {
-          "classId": 0,
-          "className": "Glioma",
-          "confidence": 95.42
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "detections": [
-        {
-          "classId": 2,
-          "className": "Notumor",
-          "confidence": 99.87
-        }
-      ]
-    }
-  ]
-}
-```
-
-#### GET /healthcheck
-
-Checks if the service and model are running properly.
-
-**Response:**
-```json
-{
-  "status": "healthy",
-  "model_loaded": true
-}
-```
-
-### Backend Structure
-
-```
-backend/
-├── models/              # Trained model files
-│   └── tumor-detection.keras
-├── main.py              # FastAPI application
-├── models.py            # Pydantic models for request/response
-├── Dockerfile           # Docker configuration
-├── requirements.txt     # Python dependencies
-└── README.md            # Backend documentation
-```
-
-## Model Training and Testing
-
-The `keras-test` directory contains a Jupyter notebook (`training-testing.ipynb`) for training and testing the deep learning model on brain MRI scans.
-
-### Model Architecture
-
-The tumor detection model uses a convolutional neural network (CNN) that classifies brain MRI scans into four categories:
-- Glioma (classId: 0)
-- Meningioma (classId: 1)
-- No tumor (classId: 2)
-- Pituitary (classId: 3)
-
-### Dataset
-
-The model is trained using a dataset of brain MRI scans from the Kaggle Brain MRI dataset, with images standardized to the appropriate input size for the neural network.
-
-## Installation and Setup
-
-### Prerequisites
-- Node.js for frontend
-- Python 3.11+ for backend
-- Docker (optional, for containerized deployment)
-
-### Running the Frontend
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-4. Access the frontend at http://localhost:3000
-
-### Running the Backend
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Make sure you have the model file in the models directory
-
-5. Run the server:
-   ```bash
-   uvicorn main:app --reload
-   ```
-
-6. Access the API at http://localhost:8000
-
-### Docker Deployment
-
-For the frontend:
-```bash
-cd frontend
-docker build -t brain-tumor-frontend .
-docker run -p 80:80 brain-tumor-frontend
-```
-
-For the backend:
+**Backend**
 ```bash
 cd backend
-docker build -t brain-tumor-api .
-docker run -p 8000:8000 brain-tumor-api
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python ../scripts/fetch_samples.py --per-class 30  # real sample MRIs (network; has offline fallback)
+python data/seed.py                    # mock patients + history (real predictions + Grad-CAM)
+python ../scripts/compute_metrics.py   # metrics JSON: ROC, PR, confusion, calibration (optional --test-dir PATH)
+python ../scripts/compute_embedding.py # t-SNE feature embedding for the metrics scatter
+uvicorn main:app --reload              # http://localhost:8000
 ```
 
-## Usage Guide
-
-### Uploading Images
-
-1. Access the web interface at http://localhost:3000
-2. Drag and drop MRI scan images onto the upload area or click "Browse Image"
-3. Once images are uploaded, click the "PREDICT" button
-4. The system will process the images and display results
-
-### Interpreting Results
-
-Each result card shows:
-- The classification (tumor type or no tumor)
-- Confidence percentage
-- A progress bar indicating confidence level
-- Red coloring for tumor detections, green for no tumor
-
-## API Client Examples
-
-### JavaScript
-
-```javascript
-// Function to encode image to base64
-async function encodeImage(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const base64 = reader.result.split(',')[1];
-      resolve(base64);
-    };
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-
-// Example usage in a form
-document.querySelector('form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const imageFiles = document.querySelector('input[type="file"]').files;
-  const encodedImages = await Promise.all(
-    Array.from(imageFiles).map(file => encodeImage(file))
-  );
-  
-  try {
-    const response = await fetch('http://localhost:8000/predict', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ image: encodedImages })
-    });
-    
-    if (!response.ok) throw new Error(`Error ${response.status}: ${response.statusText}`);
-    
-    const data = await response.json();
-    data.results.forEach(result => {
-      console.log(`Image ${result.id}:`);
-      result.detections.forEach(detection => {
-        console.log(`  ${detection.className}: ${detection.confidence}%`);
-      });
-    });
-  } catch (error) {
-    console.error('Error:', error);
-  }
-});
+**Frontend**
+```bash
+cd frontend
+npm install
+npm run dev                            # http://localhost:3000 (proxies /api -> :8000)
 ```
 
-## Frontend Components
+## Docker
 
-### App.js
-The main component that handles:
-- Theme switching (light/dark)
-- Managing image states
-- Calling the prediction API
-- Displaying results
+```bash
+cp .env.example .env   # optionally add ANTHROPIC_API_KEY
+docker-compose up --build
+# Frontend: http://localhost:3000   Backend API: http://localhost:8000
+```
 
-### ImageUpload.jsx
-Component for uploading images with:
-- Drag and drop functionality
-- File browser option
-- Visual feedback for the upload process
+## Claude AI configuration
 
-### ResultCard.jsx
-Displays the classification results:
-- Shows the image
-- Displays tumor type or "No Tumor Detected"
-- Shows confidence percentage
-- Includes a color-coded progress bar
+Set `ANTHROPIC_API_KEY` (and optionally `ANTHROPIC_MODEL`, default `claude-fable-5`) to enable
+live AI summaries/chat. Without a key, the app falls back to built-in educational text so the
+demo runs fully offline.
 
-### Loader Component
-Custom MRI scan-themed loading animation that appears during image processing.
+## Model training & evaluation
 
-## Performance Considerations
+The model is **EfficientNetB0** (ImageNet transfer learning, two-phase fine-tuning) on the
+4-class brain MRI dataset, with **temperature-scaling calibration** so confidence scores are
+trustworthy (no more saturated 100%). Current held-out test results: **~94% accuracy, macro-F1
+0.94, per-class ROC-AUC > 0.99, ECE ≈ 1.9%**.
 
-- The API uses caching to avoid reloading the model for each request
-- Batch processing for multiple images
-- The model is loaded at startup to reduce latency on first request
-- Frontend uses optimized image processing techniques
+To reproduce training from scratch:
 
-## Troubleshooting
+```bash
+# 1. Get the dataset (public GitHub mirror)
+git clone --depth 1 https://github.com/sartajbhuvaji/brain-tumor-classification-dataset.git /tmp/btmri
+# (optional) merge + restratify Training/Testing for a clean split
 
-### Common Frontend Issues
+# 2. Train (EfficientNetB0, ~15-25 min on CPU) -> backend/models/tumor-detection.keras + calibration.json
+python scripts/train_model.py --data /tmp/btmri --warmup 4 --finetune 16
 
-1. **Image upload problems**
-   - Ensure images are in supported formats (JPEG, PNG)
-   - Check browser console for errors
+# 3. Real metrics from the held-out test set (confusion, ROC, PR, calibration)
+python scripts/compute_metrics.py --test-dir /tmp/btmri/Testing
 
-2. **Connection issues**
-   - Confirm the backend API is running
-   - Verify network connectivity
+# 4. Feature embedding for the t-SNE scatter
+python scripts/compute_embedding.py
 
-### Common Backend Issues
+# 5. Validation page artifacts: 5-fold CV, model ablation, error gallery
+python scripts/validation.py --data /tmp/btmri
+python scripts/find_misclassified.py --test-dir /tmp/btmri/Testing
+```
 
-1. **Model loading error**
-   - Verify the model file is in the correct location
-   - Ensure you have sufficient memory for the model
+The **Validation** page reports 5-fold cross-validation (mean ± std), a model-comparison
+ablation (from-scratch CNN vs frozen MobileNetV2/ResNet50V2 vs fine-tuned EfficientNetB0), and
+an error-analysis gallery of the model's actual misclassifications.
 
-2. **Image processing error**
-   - Check if the image is in a supported format
-   - Verify the image encoding is correct
+`compute_metrics.py` falls back to a realistic baseline if no `--test-dir` is given, so the
+dashboard always has data.
 
-## License
+## Disclaimer
 
-This project is licensed under the MIT License.
+Research and educational use only. Not a certified diagnostic device; not a substitute for
+professional radiological assessment.

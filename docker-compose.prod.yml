@@ -1,0 +1,41 @@
+# Production stack for neuroscan.proxora.uz
+# Containers bind to localhost only; the host nginx terminates TLS and proxies
+# the subdomain to the frontend container.
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: neuroscan-backend
+    container_name: neuroscan-backend
+    restart: always
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL:-claude-haiku-4-5-20251001}
+      - ORT_THREADS=2
+    volumes:
+      - backend_data:/app/data
+    ports:
+      - "127.0.0.1:8092:8000"
+    networks: [neuronet]
+    mem_limit: 900m
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    image: neuroscan-frontend
+    container_name: neuroscan-frontend
+    restart: always
+    depends_on: [backend]
+    ports:
+      - "127.0.0.1:8093:80"
+    networks: [neuronet]
+    mem_limit: 128m
+
+volumes:
+  backend_data:
+
+networks:
+  neuronet:
+    driver: bridge

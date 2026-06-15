@@ -1,33 +1,36 @@
-# docker-compose.yml
-version: '3.8'
-
 services:
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: brain_tumor_backend
+    container_name: neuroscan_backend
     restart: always
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL:-claude-haiku-4-5-20251001}
     ports:
       - "8000:8000"
+    volumes:
+      - backend_data:/app/data
     networks:
-      - mynetwork
+      - neuronet
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: brain_tumor_frontend
+    container_name: neuroscan_frontend
     restart: always
-    environment:
-      - REACT_APP_API_BASE_URL=http://backend:8000
+    depends_on:
+      - backend
     ports:
       - "3000:80"
     networks:
-      - mynetwork
-    volumes:
-      - ./src:/app/src
+      - neuronet
+
+volumes:
+  backend_data:
 
 networks:
-  mynetwork:
+  neuronet:
     driver: bridge

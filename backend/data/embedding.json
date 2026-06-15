@@ -1,0 +1,612 @@
+{
+  "points": [
+    {
+      "x": 1.588,
+      "y": 0.79,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.996,
+      "y": 0.372,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.541,
+      "y": 0.793,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.291,
+      "y": 0.562,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.078,
+      "y": 0.084,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.026,
+      "y": 0.39,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.916,
+      "y": 0.548,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.709,
+      "y": 0.354,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.279,
+      "y": 0.643,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.199,
+      "y": 0.521,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.117,
+      "y": 0.574,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.389,
+      "y": 0.655,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.458,
+      "y": 0.567,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.217,
+      "y": 0.343,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.514,
+      "y": 0.657,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.735,
+      "y": 0.729,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.757,
+      "y": 0.739,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.285,
+      "y": 0.376,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.652,
+      "y": 0.151,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.182,
+      "y": 0.668,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.754,
+      "y": 0.463,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.199,
+      "y": 0.737,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.941,
+      "y": 0.4,
+      "class": "Glioma"
+    },
+    {
+      "x": -0.63,
+      "y": 0.861,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.918,
+      "y": 0.291,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.707,
+      "y": 0.11,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.027,
+      "y": 0.64,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.606,
+      "y": 0.482,
+      "class": "Glioma"
+    },
+    {
+      "x": 1.221,
+      "y": 0.744,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.882,
+      "y": 0.655,
+      "class": "Glioma"
+    },
+    {
+      "x": 0.946,
+      "y": 0.152,
+      "class": "Meningioma"
+    },
+    {
+      "x": 1.178,
+      "y": -0.42,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.992,
+      "y": -0.602,
+      "class": "Meningioma"
+    },
+    {
+      "x": 1.302,
+      "y": -0.197,
+      "class": "Meningioma"
+    },
+    {
+      "x": 1.1,
+      "y": -0.263,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.835,
+      "y": -0.131,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.998,
+      "y": -0.359,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.633,
+      "y": -0.329,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.38,
+      "y": 0.004,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.53,
+      "y": -0.148,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.992,
+      "y": -0.355,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.657,
+      "y": -0.299,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.741,
+      "y": -0.205,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.985,
+      "y": -0.085,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.787,
+      "y": -0.36,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.993,
+      "y": -0.153,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.565,
+      "y": -0.06,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.399,
+      "y": -0.013,
+      "class": "Meningioma"
+    },
+    {
+      "x": 1.119,
+      "y": -0.55,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.653,
+      "y": -0.175,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.786,
+      "y": -0.057,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.246,
+      "y": -0.199,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.788,
+      "y": 0.094,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.767,
+      "y": -0.42,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.211,
+      "y": 0.167,
+      "class": "Meningioma"
+    },
+    {
+      "x": 1.163,
+      "y": -0.565,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.676,
+      "y": -0.02,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.575,
+      "y": -0.109,
+      "class": "Meningioma"
+    },
+    {
+      "x": 1.127,
+      "y": -0.514,
+      "class": "Meningioma"
+    },
+    {
+      "x": 0.956,
+      "y": -0.071,
+      "class": "Meningioma"
+    },
+    {
+      "x": -1.176,
+      "y": 1.163,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.93,
+      "y": 1.356,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.991,
+      "y": 0.825,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.892,
+      "y": 1.147,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.066,
+      "y": 1.405,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.716,
+      "y": 0.927,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.186,
+      "y": 1.25,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.779,
+      "y": 1.504,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.344,
+      "y": 1.278,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.231,
+      "y": 1.433,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.779,
+      "y": 1.504,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.868,
+      "y": 0.963,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.373,
+      "y": 1.37,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.976,
+      "y": 1.043,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.383,
+      "y": 1.371,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.027,
+      "y": 0.983,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.622,
+      "y": 0.78,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.619,
+      "y": 0.991,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.721,
+      "y": 1.113,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.021,
+      "y": 0.98,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.931,
+      "y": 1.383,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.731,
+      "y": 1.022,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.509,
+      "y": 1.012,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.344,
+      "y": 1.278,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.116,
+      "y": 1.255,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.395,
+      "y": 1.262,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.705,
+      "y": 0.79,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.873,
+      "y": 1.047,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.619,
+      "y": 0.991,
+      "class": "Notumor"
+    },
+    {
+      "x": -0.801,
+      "y": 1.181,
+      "class": "Notumor"
+    },
+    {
+      "x": -1.09,
+      "y": -1.672,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.297,
+      "y": -1.502,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.297,
+      "y": -1.502,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.127,
+      "y": -1.393,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.127,
+      "y": -1.393,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.815,
+      "y": -1.45,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.888,
+      "y": -1.704,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.888,
+      "y": -1.704,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.145,
+      "y": -1.572,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.805,
+      "y": -1.442,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.805,
+      "y": -1.442,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.013,
+      "y": -1.496,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.08,
+      "y": -1.566,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.102,
+      "y": -1.375,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.325,
+      "y": -1.375,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.873,
+      "y": -1.574,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.767,
+      "y": -1.651,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.124,
+      "y": -1.417,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.124,
+      "y": -1.417,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.415,
+      "y": -0.959,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.415,
+      "y": -0.959,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.725,
+      "y": -1.619,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.718,
+      "y": -1.3,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.662,
+      "y": -1.444,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.681,
+      "y": -1.788,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.681,
+      "y": -1.787,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.672,
+      "y": -1.122,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.239,
+      "y": -1.677,
+      "class": "Pituitary"
+    },
+    {
+      "x": -1.09,
+      "y": -1.672,
+      "class": "Pituitary"
+    },
+    {
+      "x": -0.918,
+      "y": -1.287,
+      "class": "Pituitary"
+    }
+  ],
+  "classes": [
+    "Glioma",
+    "Meningioma",
+    "Notumor",
+    "Pituitary"
+  ],
+  "method": "t-SNE",
+  "n": 120
+}

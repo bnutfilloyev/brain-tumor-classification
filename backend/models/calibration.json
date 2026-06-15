@@ -1,0 +1,18 @@
+{
+  "temperature": 1.4796,
+  "ece_before": 0.0299,
+  "ece_after": 0.0159,
+  "test_accuracy": 0.9437,
+  "outputs_logits": true,
+  "img_size": [
+    224,
+    224
+  ],
+  "channels": 3,
+  "classes": [
+    "Glioma",
+    "Meningioma",
+    "Notumor",
+    "Pituitary"
+  ]
+}

@@ -69,3 +69,16 @@ temp/
 .cache/
 
 .env
+
+# Node / frontend
+node_modules/
+frontend/dist/
+# The Python `lib/`, `dist/`, `env/` rules above must not swallow frontend source
+!frontend/src/lib/
+!frontend/src/lib/**
+
+# Runtime data (keep computed metrics JSON, ignore db & generated images)
+backend/data/app.db
+backend/data/uploads/
+backend/data/gradcam/
+*.sqlite3

@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+# Keras model + training-only artifacts not needed at runtime (ONNX is used)
+models/tumor-detection.keras
+models/*.bak
+data/samples/
+*.log

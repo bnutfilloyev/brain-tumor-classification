@@ -1,0 +1,296 @@
+{
+  "total_test": 586,
+  "misclassified": 35,
+  "error_rate": 0.0597,
+  "items": [
+    {
+      "image": "/static/misclassified/Notumor_32.png",
+      "true": "Notumor",
+      "predicted": "Glioma",
+      "confidence": 98.26,
+      "scores": {
+        "Glioma": 98.26,
+        "Meningioma": 1.59,
+        "Notumor": 0.09,
+        "Pituitary": 0.06
+      }
+    },
+    {
+      "image": "/static/misclassified/Glioma_3.png",
+      "true": "Glioma",
+      "predicted": "Meningioma",
+      "confidence": 93.35,
+      "scores": {
+        "Glioma": 5.8,
+        "Meningioma": 93.35,
+        "Notumor": 0.03,
+        "Pituitary": 0.82
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_16.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 90.93,
+      "scores": {
+        "Glioma": 90.93,
+        "Meningioma": 7.36,
+        "Notumor": 0.01,
+        "Pituitary": 1.7
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_18.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 90.65,
+      "scores": {
+        "Glioma": 0.13,
+        "Meningioma": 9.19,
+        "Notumor": 0.03,
+        "Pituitary": 90.65
+      }
+    },
+    {
+      "image": "/static/misclassified/Pituitary_34.png",
+      "true": "Pituitary",
+      "predicted": "Glioma",
+      "confidence": 89.67,
+      "scores": {
+        "Glioma": 89.67,
+        "Meningioma": 1.06,
+        "Notumor": 0.1,
+        "Pituitary": 9.18
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_14.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 88.2,
+      "scores": {
+        "Glioma": 0.8,
+        "Meningioma": 11.0,
+        "Notumor": 0.01,
+        "Pituitary": 88.2
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_21.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 87.21,
+      "scores": {
+        "Glioma": 87.21,
+        "Meningioma": 12.66,
+        "Notumor": 0.09,
+        "Pituitary": 0.03
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_23.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 87.04,
+      "scores": {
+        "Glioma": 87.04,
+        "Meningioma": 12.84,
+        "Notumor": 0.01,
+        "Pituitary": 0.1
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_26.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 86.19,
+      "scores": {
+        "Glioma": 86.19,
+        "Meningioma": 13.73,
+        "Notumor": 0.04,
+        "Pituitary": 0.05
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_11.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 82.8,
+      "scores": {
+        "Glioma": 0.46,
+        "Meningioma": 16.7,
+        "Notumor": 0.05,
+        "Pituitary": 82.8
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_13.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 82.37,
+      "scores": {
+        "Glioma": 0.9,
+        "Meningioma": 16.64,
+        "Notumor": 0.08,
+        "Pituitary": 82.37
+      }
+    },
+    {
+      "image": "/static/misclassified/Glioma_7.png",
+      "true": "Glioma",
+      "predicted": "Meningioma",
+      "confidence": 81.83,
+      "scores": {
+        "Glioma": 17.11,
+        "Meningioma": 81.83,
+        "Notumor": 0.95,
+        "Pituitary": 0.11
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_30.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 81.53,
+      "scores": {
+        "Glioma": 0.2,
+        "Meningioma": 18.27,
+        "Notumor": 0.0,
+        "Pituitary": 81.53
+      }
+    },
+    {
+      "image": "/static/misclassified/Glioma_4.png",
+      "true": "Glioma",
+      "predicted": "Meningioma",
+      "confidence": 76.68,
+      "scores": {
+        "Glioma": 23.29,
+        "Meningioma": 76.68,
+        "Notumor": 0.0,
+        "Pituitary": 0.03
+      }
+    },
+    {
+      "image": "/static/misclassified/Glioma_6.png",
+      "true": "Glioma",
+      "predicted": "Meningioma",
+      "confidence": 75.12,
+      "scores": {
+        "Glioma": 24.51,
+        "Meningioma": 75.12,
+        "Notumor": 0.01,
+        "Pituitary": 0.35
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_19.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 70.03,
+      "scores": {
+        "Glioma": 2.42,
+        "Meningioma": 27.44,
+        "Notumor": 0.11,
+        "Pituitary": 70.03
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_29.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 69.88,
+      "scores": {
+        "Glioma": 1.99,
+        "Meningioma": 28.08,
+        "Notumor": 0.05,
+        "Pituitary": 69.88
+      }
+    },
+    {
+      "image": "/static/misclassified/Glioma_5.png",
+      "true": "Glioma",
+      "predicted": "Notumor",
+      "confidence": 67.9,
+      "scores": {
+        "Glioma": 18.76,
+        "Meningioma": 12.89,
+        "Notumor": 67.9,
+        "Pituitary": 0.45
+      }
+    },
+    {
+      "image": "/static/misclassified/Glioma_9.png",
+      "true": "Glioma",
+      "predicted": "Meningioma",
+      "confidence": 67.83,
+      "scores": {
+        "Glioma": 32.11,
+        "Meningioma": 67.83,
+        "Notumor": 0.05,
+        "Pituitary": 0.01
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_15.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 67.2,
+      "scores": {
+        "Glioma": 3.97,
+        "Meningioma": 28.76,
+        "Notumor": 0.07,
+        "Pituitary": 67.2
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_28.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 64.59,
+      "scores": {
+        "Glioma": 64.59,
+        "Meningioma": 32.3,
+        "Notumor": 2.53,
+        "Pituitary": 0.57
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_24.png",
+      "true": "Meningioma",
+      "predicted": "Pituitary",
+      "confidence": 63.57,
+      "scores": {
+        "Glioma": 0.43,
+        "Meningioma": 35.98,
+        "Notumor": 0.02,
+        "Pituitary": 63.57
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_27.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 62.15,
+      "scores": {
+        "Glioma": 62.15,
+        "Meningioma": 36.66,
+        "Notumor": 0.21,
+        "Pituitary": 0.99
+      }
+    },
+    {
+      "image": "/static/misclassified/Meningioma_22.png",
+      "true": "Meningioma",
+      "predicted": "Glioma",
+      "confidence": 61.45,
+      "scores": {
+        "Glioma": 61.45,
+        "Meningioma": 38.23,
+        "Notumor": 0.0,
+        "Pituitary": 0.32
+      }
+    }
+  ],
+  "shown": 24
+}

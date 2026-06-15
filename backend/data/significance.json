@@ -1,0 +1,67 @@
+{
+  "n_test": 586,
+  "n_bootstrap": 5000,
+  "deployed": "EfficientNetB0 (fine-tuned, deployed)",
+  "confidence_intervals": {
+    "EfficientNetB0 (frozen)": {
+      "accuracy": 0.9539,
+      "ci_low": 0.9369,
+      "ci_high": 0.9693
+    },
+    "MobileNetV2 (frozen)": {
+      "accuracy": 0.9096,
+      "ci_low": 0.8857,
+      "ci_high": 0.9317
+    },
+    "ResNet50V2 (frozen)": {
+      "accuracy": 0.6877,
+      "ci_low": 0.6502,
+      "ci_high": 0.7253
+    },
+    "Custom CNN (from scratch)": {
+      "accuracy": 0.9437,
+      "ci_low": 0.9232,
+      "ci_high": 0.9608
+    },
+    "EfficientNetB0 (fine-tuned, deployed)": {
+      "accuracy": 0.9437,
+      "ci_low": 0.9232,
+      "ci_high": 0.9625
+    }
+  },
+  "mcnemar_vs_deployed": [
+    {
+      "vs": "EfficientNetB0 (frozen)",
+      "discordant_deployed_only": 13,
+      "discordant_other_only": 19,
+      "chi2": 0.781,
+      "p_value": 0.37709,
+      "significant": false
+    },
+    {
+      "vs": "MobileNetV2 (frozen)",
+      "discordant_deployed_only": 39,
+      "discordant_other_only": 19,
+      "chi2": 6.224,
+      "p_value": 0.01193,
+      "significant": true
+    },
+    {
+      "vs": "ResNet50V2 (frozen)",
+      "discordant_deployed_only": 159,
+      "discordant_other_only": 9,
+      "chi2": 132.149,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "vs": "Custom CNN (from scratch)",
+      "discordant_deployed_only": 25,
+      "discordant_other_only": 25,
+      "chi2": 0.02,
+      "p_value": 1.0,
+      "significant": false
+    }
+  ],
+  "alpha": 0.05
+}
